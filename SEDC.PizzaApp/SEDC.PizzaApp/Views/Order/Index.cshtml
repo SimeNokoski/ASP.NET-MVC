@@ -1,0 +1,27 @@
+﻿
+@using SEDC.PizzaApp.Models.Domain
+@model List<Order>
+<h2>Order list: </h2>
+ <table id = "orderListTable">
+    <tr>
+        <th>Order Id:</th>
+        <th>Pizza Name:</th>
+        <th>Pizza Price: </th>
+        <th>IsOnPromotion: </th>
+        <th>User <br>Full Name:</th>
+        <th>PaymentMethod:</th>
+    </tr>
+@for(int i = 0; i < Model.Count; i++)
+{
+   
+    <tr> 
+    <td>  @Model.ElementAt(i).Id.</td>
+    <td>  @Model.ElementAt(i).Pizza.Name</td>
+    <td>  @Model.ElementAt(i).Pizza.Price</td>
+    <td>  @Model.ElementAt(i).Pizza.IsOnPromotion</td>
+    <td>  @Model.ElementAt(i).User.FirstName  @Model.ElementAt(i).User.LastName</td>
+    <td>  @Model.ElementAt(i).PaymentMethod</td>
+  
+    </tr>
+}
+</table>

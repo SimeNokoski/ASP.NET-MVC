@@ -1,0 +1,11 @@
+﻿@using SEDC.PizzaApp.Models.Domain
+@model Order
+
+<h1>Order details:</h1>
+<ul>
+    <li>Pizza Name: @Model.Pizza.Name</li>
+    <li>Pizza Price: @Model.Pizza.Price</li>
+    <li>IsOnPromotion: @Model.Pizza.IsOnPromotion</li>
+    <li>User FullName: @Model.User.FirstName @Model.User.LastName</li>
+    <li>PaymentMethod: @Model.PaymentMethod</li>
+</ul>
