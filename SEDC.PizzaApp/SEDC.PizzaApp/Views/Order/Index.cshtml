@@ -1,0 +1,22 @@
+﻿
+@using SEDC.PizzaApp.Models.ViewModels
+@model List<OrderViewModel>
+
+ <h2>List of Orders:</h2>
+<table class="orderPizzaList">
+    <tr>
+        <th>PizzaName</th>
+        <th>Price</th>
+        <th>UserFullName</th>
+        <th>PaymentMethod</th>
+    </tr>
+    @for(int i =0; i< Model.Count; i++)
+    {
+        <tr>
+            <td>@Model.ElementAt(i).PizzaName</td>
+            <td>@Model.ElementAt(i).Price</td>
+            <td>@Model.ElementAt(i).UserFullName</td>
+            <td>@Model.ElementAt(i).PaymentMethod</td>
+        </tr>
+    }
+</table>
