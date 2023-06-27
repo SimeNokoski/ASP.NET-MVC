@@ -3,11 +3,8 @@
 
 <h2>Order details: </h2>
 
-<ul>
-    <li>PizzaName: @Model.PizzaName</li>
-    <li>Price: @Model.Price</li>
-    <li>PaymentMethod: @Model.PaymentMethod</li>
-    <li>UserFullName: @Model.UserFullName</li>
-    <li>UserAddress: @Model.UserAddress</li>
-</ul>
+<partial name="~/Views/Shared/Partials/_OrderDetailsPartial.cshtml" for=@Model />
 
+@Html.ActionLink("Back to orders page", "Index")
+
+<a asp-controller="Home" asp-action="Index">Back to home page</a>

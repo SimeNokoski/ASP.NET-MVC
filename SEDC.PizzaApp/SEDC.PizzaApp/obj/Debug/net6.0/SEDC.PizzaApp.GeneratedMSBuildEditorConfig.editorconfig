@@ -32,6 +32,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/simen/OneDrive/Desktop/SEDC.PizzaApp/SEDC.PizzaApp/Views/Home/SeeUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWVVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simen/OneDrive/Desktop/SEDC.PizzaApp/SEDC.PizzaApp/Views/Order/CreateOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ3JlYXRlT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simen/OneDrive/Desktop/SEDC.PizzaApp/SEDC.PizzaApp/Views/Order/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/simen/OneDrive/Desktop/SEDC.PizzaApp/SEDC.PizzaApp/Views/Order/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,6 +66,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/simen/OneDrive/Desktop/SEDC.PizzaApp/SEDC.PizzaApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simen/OneDrive/Desktop/SEDC.PizzaApp/SEDC.PizzaApp/Views/Shared/Partials/_OrderDetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxzXF9PcmRlckRldGFpbHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simen/OneDrive/Desktop/SEDC.PizzaApp/SEDC.PizzaApp/Views/Shared/Partials/_OrderGreetingPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxzXF9PcmRlckdyZWV0aW5nUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simen/OneDrive/Desktop/SEDC.PizzaApp/SEDC.PizzaApp/Views/Shared/Partials/_PizzaDetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxzXF9QaXp6YURldGFpbHNQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/simen/OneDrive/Desktop/SEDC.PizzaApp/SEDC.PizzaApp/Views/Shared/_ValidationScriptsPartial.cshtml]

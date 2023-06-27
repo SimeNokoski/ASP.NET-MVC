@@ -2,6 +2,14 @@
 @using SEDC.PizzaApp.Models.ViewModels
 @model List<OrderViewModel>
 
+@{
+    ViewData["Title"] = "List of orders";
+}
+
+<partial name="~/Views/Shared/Partials/_OrderGreetingPartial.cshtml" />
+
+<a class="btn btn-success" asp-action="CreateOrder">Create new order</a>
+
  <h2>List of Orders:</h2>
 <table class="orderPizzaList">
     <tr>
@@ -9,6 +17,8 @@
         <th>Price</th>
         <th>UserFullName</th>
         <th>PaymentMethod</th>
+        <th>SeeDetails</th>
+        <th>Delete Order</th>
     </tr>
     @for(int i =0; i< Model.Count; i++)
     {
@@ -17,6 +27,21 @@
             <td>@Model.ElementAt(i).Price</td>
             <td>@Model.ElementAt(i).UserFullName</td>
             <td>@Model.ElementAt(i).PaymentMethod</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@Model.ElementAt(i).Id">See Details</a>
+            </td>
+            <td>
+            <a asp-action="Delete" asp-route-id="@Model.ElementAt(i).Id">Delete Order</a>
+            </td>
         </tr>
     }
 </table>
+
+
+
+
+<h4>Fun facts:</h4>
+<p>Total number of orders: @ViewBag.NumberOfOrders</p>
+<p>First user of our app: @ViewBag.FirstUser.FirstName @ViewBag.FirstUser.LastName</p>
+
+<p>@ViewBag.Date</p>

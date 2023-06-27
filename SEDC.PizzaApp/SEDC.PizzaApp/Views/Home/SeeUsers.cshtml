@@ -1,0 +1,11 @@
+﻿ 
+@model List<UserFullName>
+<h2>Users: </h2>
+@{
+    ViewData["Title"] = "List Of Users";
+}
+<ol>
+@foreach(var f in Model){
+    <li>@f.FullName</li>
+}
+</ol>

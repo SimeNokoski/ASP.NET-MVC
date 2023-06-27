@@ -12,6 +12,8 @@ namespace SEDC.PizzaApp.Mappers
                 Name = pizza.Name,
                 PizzaSize = pizza.PizzaSize,
                 Price = pizza.HasExtras ? pizza.Price + 10 : pizza.Price,
+                IsOnPromotion = pizza.IsOnPromotion,
+                Id = pizza.Id,
             };
         }
         public static PizzaDetailsViewModel PizzaToPizzaDetailsViewModel(this Pizza pizza)
@@ -21,6 +23,9 @@ namespace SEDC.PizzaApp.Mappers
                 Name = pizza.Name,
                 PizzaSize = pizza.PizzaSize,
                 Price = pizza.HasExtras ? pizza.Price + 10 : pizza.Price,
+                IsOnPromotion = pizza.IsOnPromotion,
+                Id = pizza.Id,
+                
             };
         }
     }

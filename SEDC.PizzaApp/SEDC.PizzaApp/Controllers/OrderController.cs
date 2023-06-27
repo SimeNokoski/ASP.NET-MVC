@@ -13,6 +13,10 @@ namespace SEDC.PizzaApp.Controllers
             List<Order> ordersFromDb = StaticDb.Orders;
 
             List<OrderViewModel> orderViewModels =  ordersFromDb.Select(order=> order.ToOrderViewModelExtension()).ToList();
+
+            ViewBag.NumberOfOrders = orderViewModels.Count;
+            ViewBag.Date = DateTime.Now.ToShortDateString();
+            ViewBag.FirstUser = StaticDb.Orders.First().User;
             return View(orderViewModels);
             
         }
@@ -41,6 +45,53 @@ namespace SEDC.PizzaApp.Controllers
         public IActionResult RedirectToHome()
         {
             return RedirectToAction("Index","Home");
+        }
+        public IActionResult Delete(int id)
+        {
+            if(id == null)
+            {
+                return new EmptyResult();
+            }
+            Order order = StaticDb.Orders.FirstOrDefault(x=>x.Id == id);
+            if( order == null)
+            {
+                return new EmptyResult();
+            }
+            OrderDetailsViewModel viewModel = order.ToOrderDetailsViewModelExtension();
+            return View(viewModel);
+        }
+        public IActionResult ConfirmDelete(int? id)
+        {
+            if (id == null)
+            {
+                return new EmptyResult();
+            }
+
+            Order order = StaticDb.Orders.FirstOrDefault(order => order.Id == id);
+
+            if (order == null)
+            {
+                return new EmptyResult();
+            }
+
+            StaticDb.Orders.Remove(order);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public IActionResult CreateOrder()
+        {
+            OrderViewModel viewModel = new OrderViewModel();
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult CreteOrderPost(OrderViewModel viewModel)
+        {
+
+
+
+            return RedirectToAction("Index");
         }
     }
 }

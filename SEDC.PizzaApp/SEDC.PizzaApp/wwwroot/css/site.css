@@ -18,7 +18,7 @@ body {
 }
 .orderPizzaList{
     text-align: center;
-    width: 40%;
+    width: 80%;
 }
 .orderPizzaList td, th {
     border: 1px solid black;

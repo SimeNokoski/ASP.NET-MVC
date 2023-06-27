@@ -11,6 +11,7 @@ namespace SEDC.PizzaApp.Controllers
         {
             List<Pizza> pizzas = StaticDb.Pizzas;
             List<PizzaViewModel> pizzaViewModels = pizzas.Select(x => x.PizzaToPizzaViewModel()).ToList();
+            ViewBag.TotalPizzas = pizzaViewModels.Count;
             return View(pizzaViewModels);
         }
         public IActionResult Error()
@@ -31,5 +32,6 @@ namespace SEDC.PizzaApp.Controllers
             PizzaDetailsViewModel pizzaDetailsViewModel = pizza.PizzaToPizzaDetailsViewModel();
             return View(pizzaDetailsViewModel);
         }
+     
     }
 }

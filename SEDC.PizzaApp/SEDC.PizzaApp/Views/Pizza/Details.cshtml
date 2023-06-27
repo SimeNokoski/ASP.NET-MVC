@@ -2,10 +2,19 @@
 ﻿@using SEDC.PizzaApp.Models.ViewModels
 @model PizzaDetailsViewModel
 
- <h2>Pizza Details:</h2>
-<ul>
-    <li>PizzaName: @Model.Name</li>
-    <li>Price: @Model.Price</li>
-    <li>Price: @Model.PizzaSize</li>
-</ul>
- 
+<h2>Pizza Details:</h2>
+<partial name="~/Views/Shared/Partials/_PizzaDetailsPartial.cshtml" for=@Model />
+
+@{
+    if (Model.IsOnPromotion)
+    {
+        <h4>The pizza is on promotion</h4>
+    }
+    else
+    {
+        <h4>The pizza is not on promotion</h4>
+    }
+}
+
+<a asp-action="GetPizzas" >Back to PizzaList</a>
+<a asp-action="Index" asp-controller="Home">Back to Home</a>

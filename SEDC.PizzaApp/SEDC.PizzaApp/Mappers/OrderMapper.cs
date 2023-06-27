@@ -22,7 +22,8 @@ namespace SEDC.PizzaApp.Mappers
                 PizzaName = order.Pizza.Name,
                 UserFullName = $"{order.User.FirstName} {order.User.LastName}",
                 PaymentMethod = order.PaymentMethod,
-                Price = order.Pizza.Price + 50
+                Price = order.Pizza.Price + 50,
+                Id = order.Id
             };
         }
         public static OrderDetailsViewModel ToOrderDetailsViewModelExtension(this Order order)
@@ -33,7 +34,9 @@ namespace SEDC.PizzaApp.Mappers
                 UserFullName = $"{order.User.FirstName} {order.User.LastName}",
                 PaymentMethod = order.PaymentMethod,
                 Price = order.Pizza.Price + 50,
-                UserAddress = order.User.Address
+                UserAddress = order.User.Address,
+                Id = order.Id,
+                IsDelivered = order.Delivered
             };
         }
     }

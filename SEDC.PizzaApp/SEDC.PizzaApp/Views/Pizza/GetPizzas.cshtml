@@ -2,12 +2,17 @@
 @using SEDC.PizzaApp.Models.ViewModels
 @model List<PizzaViewModel>
 
+    @{
+        ViewData["Title"] = "List Of Pizzas";
+    }
+
 <h2>List of Pizzas</h2>
 <table class="orderPizzaList">
     <tr>
         <th>PizzaName</th>
         <th>PizzaSize</th>
         <th>Price</th>
+        <th>Details</th>
     </tr>
     @for (int i = 0; i < Model.Count; i++)
     {
@@ -15,6 +20,10 @@
             <td>@Model.ElementAt(i).Name</td>
             <td>@Model.ElementAt(i).PizzaSize</td>
             <td>@Model.ElementAt(i).Price</td>
-        </tr>
+            <td>
+                <a asp-action="Details" asp-route-id=@Model.ElementAt(i).Id>See Details</a>
+            </td>
+         </tr>
     }
 </table>
+<p>Toatal Pizzas: @ViewBag.TotalPizzas</p>

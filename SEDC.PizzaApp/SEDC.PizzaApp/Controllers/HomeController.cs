@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SEDC.PizzaApp.Mappers;
 using SEDC.PizzaApp.Models;
+using SEDC.PizzaApp.Models.Domain;
+using SEDC.PizzaApp.Models.ViewModels;
 using System.Diagnostics;
 
 namespace SEDC.PizzaApp.Controllers
@@ -31,6 +34,12 @@ namespace SEDC.PizzaApp.Controllers
         public IActionResult About()
         {
             return View();
+        }
+        public IActionResult SeeUsers()
+        {
+            List<User> users = StaticDb.Users;
+            List<UserFullName> userFullNames = users.Select(x=>x.UserName()).ToList();
+             return View(userFullNames);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
